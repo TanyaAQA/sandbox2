@@ -4,25 +4,23 @@ public class MyFirstSoft {
     public static void main(String[] args) {
         Hello(123);
 
-        int len = 5;
-      System.out.println("Площадь квадрата со стороной " + len + " = " + ploshad(len));
+      Square s = new Square(5);
+      System.out.println("Площадь квадрата со стороной " + s.len + " = " + s.ploshad());
 
+      Rectangle r = new Rectangle(4, 6);
+           System.out.println("Площадь прямоугольника со сторонами " + r.storona1 + " и " + r.storona2 + " = " + r.area());
 
-      double storona1 = 4;
-      double storona2 = 6;
-      System.out.println("Площадь прямоуга со сторонами " + storona1 + "и" + storona2 + " = " + area(storona1, storona2));
+      Point p1 = new Point(0,0);
+      Point p2 = new Point (1,3);
+      // Если хотим просто упомянуть названия точек, то пишем:
+      // System.out.println("Расстояние межу точками p1 и p2 = " + p1.distance(p2));
 
+      // Если хотим с нормальным указанием координат, то:
+      System.out.println("Расстояние между точками (" + p1.x + ", " + p1.y + ") и (" + p2.x + ", " + p2.y + ") равно " + p1.distance(p2));
     }
 
     public static void Hello (int somebody) {
            System.out.println("Hello " + somebody + "!");
     }
 
-    public static int ploshad (int a) {
-      return a * a;
     }
-
-    public static double area (double b, double c) {
-      return b * c;
-    }
-}
